@@ -1,13 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { BrowserRouter as Router } from 'react-router-dom'
-import './index.css'
-import AppRoutes from './AppRoutes.tsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter as Router } from "react-router-dom";
+import "./index.css";
+import AppRoutes from "./AppRoutes.tsx";
+import Auth0ProviderwithNavigate from "./auth/Auth0ProviderwithNavigate.tsx";
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Router>
-      <AppRoutes/>
+      <Auth0ProviderwithNavigate>
+        <AppRoutes />
+      </Auth0ProviderwithNavigate>
     </Router>
   </StrictMode>
-)
+);

@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 type Props = {
@@ -13,6 +14,7 @@ const Layout = ({ children, showHero = false }: Props) => {
         <Header />
         <Banner />
         <div className="container mx-auto flex-1 py-10 px-3">{children}</div>
+        <Footer />
       </div>
     </>
   );
