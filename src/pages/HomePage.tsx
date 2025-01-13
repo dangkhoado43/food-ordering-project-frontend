@@ -10,17 +10,15 @@ const HomePage = () => {
           <h1 className="text-4xl font-bold tracking-tight text-rose-600">
             Tuck into a takeway today
           </h1>
-          <span className="text-xl">
-            Your Favorite Food, Just a Click Away!
-          </span>
+          <span className="text-xl">Food Just a Click Away!</span>
           <SearchBar
           // placeHolder="Search by City or Town"
-        />
+          />
         </div>
         <div className="grid md:grid-cols-2 gap-5">
           <img src={landingImage} />
           <div className="flex flex-col items-center justify-center gap-4">
-            <span className="font-bold text-2xl tracking-tighter">
+            <span className="font-bold text-2xl tracking-tight">
               Order takeaway tonight!
             </span>
             <span>

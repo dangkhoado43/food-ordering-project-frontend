@@ -25,7 +25,7 @@ const MobileNav = () => {
               {/* <span className="font-bold gap-2">
                 <CircleUserRound className="text-orange-500" />
               </span> */}
-              <span> Welcome to Chicks.com!</span>
+              <span> Welcome to Foodie!</span>
             </SheetTitle>
             <Separator />
             <SheetDescription className="flex flex-col gap-4">
@@ -33,9 +33,9 @@ const MobileNav = () => {
               <Link to="/" className="text-left font-bold hover:text-rose-600">
                 Home
               </Link>
-              <Link to="/" className="text-left font-bold hover:text-rose-600">
+              {/* <Link to="/" className="text-left font-bold hover:text-rose-600">
                 Products
-              </Link>
+              </Link> */}
               <Link to="/" className="text-left font-bold hover:text-rose-600">
                 About
               </Link>
