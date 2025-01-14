@@ -5,9 +5,6 @@ import UsernameMenu from "./UsernameMenu";
 
 const MainNav = () => {
   const { loginWithRedirect, isAuthenticated } = useAuth0();
-  console.log(useAuth0());
-  console.log(loginWithRedirect);
-  console.log(isAuthenticated);
 
   return (
     <>
@@ -24,13 +21,13 @@ const MainNav = () => {
             <Link to="/" className="font-bold hover:text-rose-600">
               Home
             </Link>
-            {/* <Link to="/" className="font-bold hover:text-rose-600">
-              Products
-            </Link> */}
             <Link to="/" className="font-bold hover:text-rose-600">
               About
             </Link>
-            <Button className="font-bold bg-rose-600 hover:bg-rose-500 active:text-rose-600 active:bg-white active:border active:border-rose-600">
+            <Button
+              className="font-bold bg-rose-600 hover:bg-rose-500 active:text-rose-600 active:bg-white active:border active:border-rose-600"
+              onClick={async () => await loginWithRedirect()}
+            >
               Login
             </Button>
           </>
