@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const MobileNav = () => {
-  const { isAuthenticated, user } = useAuth0();
+  const { isAuthenticated, loginWithRedirect, user } = useAuth0();
 
   return (
     <>
@@ -28,7 +28,9 @@ const MobileNav = () => {
               {isAuthenticated ? (
                 <span className="flex items-center font-bold gap-2">
                   <CircleUserRound className="text-rose-600" />
-                  <span className="text-xs hover:text-rose-600">{user?.nickname}</span>
+                  <span className="text-xs hover:text-rose-600">
+                    {user?.nickname}
+                  </span>
                 </span>
               ) : (
                 <span> Welcome to Foodie!</span>
@@ -52,7 +54,10 @@ const MobileNav = () => {
                   >
                     About
                   </Link>
-                  <Button className="font-bold bg-rose-600 hover:bg-rose-500 active:text-rose-600 active:bg-white active:border active:border-rose-600">
+                  <Button
+                    onClick={() => loginWithRedirect()}
+                    className="font-bold bg-rose-600 hover:bg-rose-500 active:text-rose-600 active:bg-white active:border active:border-rose-600"
+                  >
                     Login
                   </Button>
                 </>
